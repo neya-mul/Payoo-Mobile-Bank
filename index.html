@@ -24,8 +24,8 @@
 </head data-theme="light">
 
 <body class="max-w-[600px] mx-auto bg-base-200">
-    <header class="space-y-9 py-[200px]">
-        <div class="header-logo mx-auto w-[500px] ">
+    <header class="space-y-9 py-[200px] mx-auto">
+        <div class="header-logo mx-auto max-w-[500px] ">
             <img src="./assets/Logo-full.png" alt="" class="mx-auto">
         </div>
         <div class="form w-[100%]">
@@ -35,10 +35,12 @@
                     <div class="card-body">
                         <fieldset class="fieldset">
                             <label class="label">Mobile Number</label>
-                            <input type="email" class="input bg-base-200 border-none w-[100%] rounded-full" placeholder="Enter Your Mobile Number" />
+                            <input type="number" class="input bg-base-200 border-none w-[100%] rounded-full"
+                                placeholder="Enter Your Mobile Number" id="mobile-number"/>
                             <label class="label">Pin</label>
-                            <input type="password" class="input bg-base-200 border-none w-[100%] rounded-full" placeholder="Enter Your 4 digit pin" /> <br>
-                            <button class="btn btn-primary rounded-full">Login</button>
+                            <input type="password" class="input bg-base-200 border-none w-[100%] rounded-full"
+                                placeholder="Enter Your 4 digit pin" id="pin"/> <br>
+                            <button class="btn btn-primary rounded-full" id="login-button">Login</button>
                         </fieldset>
                     </div>
                 </div>
@@ -50,7 +52,7 @@
 
 
 
-
+    <script src="login.js"></script>
 </body>
 
 </html>
