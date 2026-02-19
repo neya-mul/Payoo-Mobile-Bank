@@ -57,3 +57,20 @@ document.getElementById('add-money').addEventListener('click', function () {
     cashIn.style.display = 'block'
 })
 
+document.getElementById('history').addEventListener('click', function () {
+    let body = document.getElementById('main');
+    let notification = document.createElement('p');
+    notification.innerText = 'Your Money Amount has changed.';
+    notification.style.padding = '15px'
+    notification.style.backgroundColor = 'white'
+    notification.style.marginTop = '20px'
+    notification.style.borderRadius = '20px'
+    notification.style.textAlign = 'center'
+
+    body.appendChild(notification)
+    let cashOut = document.querySelector('.cash-out-form')
+    cashOut.style.display = 'none'
+    let cashIn = document.querySelector('.cash-in-form');
+    cashIn.style.display = 'none'
+
+})

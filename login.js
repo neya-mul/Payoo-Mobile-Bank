@@ -10,4 +10,4 @@ document.getElementById('login-button').addEventListener('click', function () {
       alert('login failed')
       return;
    }
-})
+}) 
