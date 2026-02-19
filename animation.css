@@ -1,0 +1,15 @@
+.animation {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: move-right .7s linear infinite;
+}
+
+@keyframes move-right {
+    from {
+       transform: translateX(0);
+    }
+
+    to {
+        transform:  translateX(3px);
+    }
+
+}
