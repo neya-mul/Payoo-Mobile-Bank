@@ -33,12 +33,27 @@ document.getElementById('add-money-button').addEventListener('click', function (
     let addMoneyAmount = document.getElementById('add-money-amount').value;
     let addMoneyPin = document.getElementById('add-money-pin').value;
     let newAmount = Number(currentAmmount) + Number(addMoneyAmount);
-    if(agentMobileNumber === '01234567890' && addMoneyPin === '1234'){
+    if (agentMobileNumber === '01234567890' && addMoneyPin === '1234') {
         alert('Money Added')
         money.innerText = newAmount;
     }
-    else{
+    else {
         alert('Invalid Information')
     }
-  
+
 })
+
+document.getElementById('cash-out').addEventListener('click', function () {
+    let cashOut = document.querySelector('.cash-out-form')
+    cashOut.style.display = 'block'
+    let cashIn = document.querySelector('.cash-in-form');
+    cashIn.style.display = 'none'
+})
+
+document.getElementById('add-money').addEventListener('click', function () {
+    let cashOut = document.querySelector('.cash-out-form')
+    cashOut.style.display = 'none'
+    let cashIn = document.querySelector('.cash-in-form');
+    cashIn.style.display = 'block'
+})
+
