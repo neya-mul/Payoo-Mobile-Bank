@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            /* font outfit */
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
     <title>Payoo Mobile Bank</title>
 </head>
 
@@ -25,7 +32,7 @@
         <div class="div1 flex items-center max-w-[180px]">
             <img src="./assets/logo.png" alt="" class="max-w-[70px]">
             <div>
-                <h1 class="text-2xl font-bold " >$<span id="money">45000</span></h1>
+                <h1 class="text-2xl font-bold ">$<span id="money">45000</span></h1>
                 <p>Available Balance</p>
             </div>
 
@@ -40,6 +47,7 @@
     </header>
 
     <main>
+        <!-- all buttons section -->
         <section class="section p-5 rounded-b-[30px] bg-white">
             <h1 class="text-2xl font-bold">Wellcome to Pay<span class="text-[#7460FF] opacity-80">oo</span></h1>
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
@@ -79,23 +87,59 @@
                 </button>
             </div>
         </section>
-        <section class="cash-out-form mt-[40px]">
+        <!-- add money section -->
+        <section class="cash-in-form mt-[40px]">
             <div class="form w-[90%] mx-auto">
                 <div class="hero bg-base-200">
 
                     <div class="card bg-base-100 w-full shadow-2xl">
                         <div class="card-body">
+                            <h1 class="text-2xl">Add Money</h1>
+                            <fieldset class="fieldset">
+                                  <label class="label">Select a Bank Number</label>
+                                <select class="select w-[100%] rounded-full">
+                                    <option disabled selected>Your Bank</option>
+                                    <option>Jamuna Bank</option>
+                                    <option>Islami Bank</option>
+                                    <option>Agrani Bank</option>
+                                </select>
+                                <label class="label">Agent Number</label>
+                                <input type="number" class="input bg-base-200 border-none w-[100%] rounded-full"
+                                    placeholder="Enter Your Mobile Number" id="agent-mobile-number" />
+                                <label class="label">Amount</label>
+                                <input type="number" class="input bg-base-200 border-none w-[100%] rounded-full"
+                                    placeholder="Enter your cash-in amount" id="add-money-amount" />
+                                <label class="label">Pin Number</label>
+                                <input type="password" class="input bg-base-200 border-none w-[100%] rounded-full"
+                                    placeholder="Enter Pin Number" id="add-money-pin" /> <br>
+                                <button class="btn btn-primary rounded-full" id="add-money-button">Add
+                                    Money</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cash out section -->
+        <section class="cash-out-form mt-[40px] hidden">
+            <div class="form w-[90%] mx-auto">
+                <div class="hero bg-base-200">
+
+                    <div class="card bg-base-100 w-full shadow-2xl">
+                        <div class="card-body">
+                            <h1 class="text-2xl">Cash Out</h1>
                             <fieldset class="fieldset">
                                 <label class="label">Agent Number</label>
                                 <input type="number" class="input bg-base-200 border-none w-[100%] rounded-full"
-                                    placeholder="Enter Your Mobile Number" id="agent-number"/>
+                                    placeholder="Enter Your Mobile Number" id="agent-number" />
                                 <label class="label">Amount</label>
                                 <input type="number" class="input bg-base-200 border-none w-[100%] rounded-full"
                                     placeholder="Enter your cash-out amount" id="amount" />
                                 <label class="label">Pin Number</label>
                                 <input type="password" class="input bg-base-200 border-none w-[100%] rounded-full"
                                     placeholder="Enter Pin Number" id="pin" /> <br>
-                                <button class="btn btn-primary rounded-full" id="widthdraw-button">Widthdraw Money</button>
+                                <button class="btn btn-primary rounded-full" id="widthdraw-button">Widthdraw
+                                    Money</button>
                             </fieldset>
                         </div>
                     </div>
@@ -104,7 +148,7 @@
         </section>
     </main>
 
-    <script src="./cash-out.js"></script>
+    <script src="./all.js"></script>
 </body>
 
 </html>

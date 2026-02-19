@@ -24,3 +24,21 @@ document.getElementById('widthdraw-button').addEventListener('click', function (
     }
 
 })
+
+
+document.getElementById('add-money-button').addEventListener('click', function () {
+    let money = document.getElementById('money');
+    let currentAmmount = money.innerText;
+    let agentMobileNumber = document.getElementById('agent-mobile-number').value;
+    let addMoneyAmount = document.getElementById('add-money-amount').value;
+    let addMoneyPin = document.getElementById('add-money-pin').value;
+    let newAmount = Number(currentAmmount) + Number(addMoneyAmount);
+    if(agentMobileNumber === '01234567890' && addMoneyPin === '1234'){
+        alert('Money Added')
+        money.innerText = newAmount;
+    }
+    else{
+        alert('Invalid Information')
+    }
+  
+})
